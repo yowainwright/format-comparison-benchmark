@@ -1,0 +1,46 @@
+{
+  "name": "rome-format-vs-prettier-benchmarks",
+  "version": "0.0.1",
+  "description": "A quick repo used to benchmark format tools",
+  "main": "README.md",
+  "scripts": {
+    "copy:config": "shx cp -r config/* dump/",
+    "copy:ramda": "shx cp -r node_modules/ramda/src/* dump/src/",
+    "mkdir": "shx mkdir dump && shx mkdir dump/src",
+    "test:setup": "pnpm mkdir && pnpm copy:config && pnpm copy:ramda",
+    "test:prettier:js": "(pnpm test:setup && prettier --write dump/src/**/*.js && pnpm test:teardown) | gnomon",
+    "test:rome:js": "(pnpm test:setup && rome format dump/src/**/*.js && pnpm test:teardown) | gnomon",
+    "test:prettier:all": "(pnpm test:setup && prettier --write dump/* && pnpm test:teardown) | gnomon",
+    "test:rome:feature-parity": "(pnpm test:setup && rome format dump/src/**/*.js && markdownlint dump/*.md --fix --disable MD013 MD036 MD001 && stylelint 'dump/*.css' --config .stylelintrc --fix && jsonlint dump/comments.json && pnpm test:teardown) | gnomon",
+    "test:teardown": "rimraf dump"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yowainwright/format-comparison-benchmark.git"
+  },
+  "author": "Jeff Wainwright <yowainwright@gmail.com> (https://jeffry.in)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yowainwright/format-comparison-benchmark/issues"
+  },
+  "homepage": "https://github.com/yowainwright/format-comparison-benchmark#readme",
+  "devDependencies": {
+    "gnomon": "^1.5.0",
+    "jsonlint": "^1.6.3",
+    "markdownlint-cli": "^0.31.1",
+    "prettier": "^2.6.2",
+    "ramda": "^0.28.0",
+    "rimraf": "^3.0.2",
+    "rome": "^0.4.2-next",
+    "shx": "^0.3.4",
+    "stylelint": "^14.6.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-standard": "^25.0.0"
+  },
+  "stylelint": {
+    "extends": [
+      "stylelint-config-standard",
+      "stylelint-config-prettier"
+    ]
+  }
+}
