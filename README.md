@@ -6,6 +6,21 @@ The npm scripts within this repository's `package.json` can be used to compare R
 
 ---
 
+## Setup
+
+Utilities setup
+
+```sh
+nvm i && npm i pnpm -g && pnpm i
+```
+
+Running scripts
+
+```sh
+pnpm <test:<formatter>:<unique-script-identifier>
+# see all available script in the package.json > script or in the #scripts section below
+```
+
 ## Scripts
 
 - **`test:prettier:js`**: Run prettier on all JavaScript files added to a temp directory.
