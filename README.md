@@ -28,6 +28,14 @@ Local Benchmarks
 | js only | 1.5404s | 2.0353s |
 | all | *2.2669s | 2.7163s |
 
+Initial [Github Action Benchmarks](https://github.com/yowainwright/format-comparison-benchmark/actions)
+
+| Script | Rome | Prettier |
+| :---: | :---: | :---: |
+| js only | 24s | 36s |
+| all | *26s | 31s |
+
+
 \*I think I've written the script `test:rome:feature-parity` so that stylelint & markdownlint basically don't run. Will review. 🧐
 
 
