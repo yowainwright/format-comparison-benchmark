@@ -24,7 +24,7 @@ Each script creates a temp directory (`/dump`), copies config files and [rambda]
 Local Benchmarks
 
 | Script | Rome | Prettier |
-| :---: | :---: | :---: | :---: |
+| :---: | :---: | :---: |
 | js only | 1.5404s | 2.0353s |
 | all | *2.2669s | 2.7163s |
 
