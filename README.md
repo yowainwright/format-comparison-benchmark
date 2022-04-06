@@ -32,8 +32,8 @@ Initial [Github Action Benchmarks](https://github.com/yowainwright/format-compar
 
 | Script | Rome | Prettier |
 | :---: | :---: | :---: |
-| js only | 24s | 36s |
-| all | *26s | 31s |
+| js only | 17s | 18s |
+| all | *12s | 17s |
 
 
 \*I think I've written the script `test:rome:feature-parity` so that stylelint & markdownlint basically don't run. Will review. 🧐
@@ -41,7 +41,7 @@ Initial [Github Action Benchmarks](https://github.com/yowainwright/format-compar
 
 ---
 
-## Projects Code Is Copied From For Convenience
+## Code is copied from these projects for speed 🏎️
 
 - **[kerns](https://raw.githubusercontent.com/kerns/dummy/master/README.md)**: a dummy toolkit
 - **[jsonplaceholder](https://jsonplaceholder.typicode.com/)** a json placeholder toolkit
