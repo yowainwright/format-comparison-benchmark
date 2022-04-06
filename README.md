@@ -56,7 +56,7 @@ Initial [Github Action Benchmarks](https://github.com/yowainwright/format-compar
 
 ---
 
-## Code is copied from these projects for speed 🏎️
+## Some code was copied from these projects for speed 🏎️
 
 - **[kerns](https://raw.githubusercontent.com/kerns/dummy/master/README.md)**: a dummy toolkit
 - **[jsonplaceholder](https://jsonplaceholder.typicode.com/)** a json placeholder toolkit
