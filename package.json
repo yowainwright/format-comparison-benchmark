@@ -33,7 +33,7 @@
     "rimraf": "^3.0.2",
     "rome": "^0.4.2-next",
     "shx": "^0.3.4",
-    "stylelint": "^14.6.1",
+    "stylelint": "^15.10.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^25.0.0"
   },
